@@ -73,7 +73,11 @@ class MainActivity : AppCompatActivity() {
                 Log.d("googry", "Drawer 열렸을때")
             }
         })
-        
+
+        dl_root.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+//        dl_root.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, fl_right_side)
+//        dl_root.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, fl_left_side)
+
         btn_open_left.setOnClickListener {
             dl_root.openDrawer(fl_left_side)
         }
