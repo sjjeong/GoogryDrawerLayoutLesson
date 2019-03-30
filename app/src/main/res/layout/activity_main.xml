@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,10 +11,27 @@
         android:layout_height="match_parent"
         android:background="@color/color_1">
 
+        <Button
+            android:id="@+id/btn_open_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="왼쪽 열기"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_open_left_non_animate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="왼쪽 열기 non animate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_open_left" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- The navigation drawer -->
     <FrameLayout
+        android:id="@+id/fl_left_side"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
