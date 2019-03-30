@@ -15,5 +15,11 @@ class MainActivity : AppCompatActivity() {
         btn_open_left_non_animate.setOnClickListener {
             dl_root.openDrawer(fl_left_side, false)
         }
+        btn_open_right.setOnClickListener {
+            dl_root.openDrawer(fl_right_side)
+        }
+        btn_open_right_non_animate.setOnClickListener {
+            dl_root.openDrawer(fl_right_side, false)
+        }
     }
 }
